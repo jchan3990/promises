@@ -16,8 +16,8 @@ var pluckFirstLineFromFileAsync = function(filePath) {
       if (err) {
         reject(err);
       } else {
-        data = data.toString().split('\n');
-        resolve(data[0]);
+      data = data.toString().split('\n');
+      resolve(data[0]);
       }
     });
   });
@@ -28,7 +28,7 @@ var getStatusCodeAsync = function(url) {
   // TODO
   return new Promise((resolve, reject) => {
     request(url, (err, res, body) => {
-      if (err) {
+      if(err) {
         reject(err);
       } else {
         resolve(res.statusCode);
